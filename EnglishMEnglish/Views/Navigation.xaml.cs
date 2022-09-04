@@ -22,9 +22,19 @@ namespace EnglishMEnglish.Views
     /// </summary>
     public sealed partial class Navigation : Page
     {
-        public Navigation()
-        {
+        public Navigation() =>
             this.InitializeComponent();
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            DynamicPanel.Visibility = Visibility.Collapsed;
+            DynamicPanelVisibilityButton.Visibility = Visibility.Visible;
+        }
+
+        private void DynamicPanelVisibilityButton_Click(object sender, RoutedEventArgs e)
+        {
+            (sender as Button).Visibility = Visibility.Collapsed;
+            DynamicPanel.Visibility = Visibility.Visible;
         }
     }
 }

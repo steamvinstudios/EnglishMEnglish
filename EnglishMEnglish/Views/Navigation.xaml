@@ -9,6 +9,34 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <VariableSizedWrapGrid x:Name="DynamicPanel"
+                               Orientation="Horizontal"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Bottom">
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="test content"/>
+            <Button Content="Скрыть"
+                    Background="{ThemeResource SystemAccentColor}"
+                    Click="Button_Click"/>
+        </VariableSizedWrapGrid>
+        <Button x:Name="DynamicPanelVisibilityButton"
+                Content="👁"
+                Background="{ThemeResource SystemAccentColor}"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Bottom"
+                Visibility="Collapsed"
+                Click="DynamicPanelVisibilityButton_Click"/>
     </Grid>
 </Page>
