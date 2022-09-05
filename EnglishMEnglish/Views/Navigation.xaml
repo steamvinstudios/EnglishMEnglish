@@ -9,34 +9,175 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <VariableSizedWrapGrid x:Name="DynamicPanel"
-                               Orientation="Horizontal"
-                               HorizontalAlignment="Center"
-                               VerticalAlignment="Bottom">
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="test content"/>
-            <Button Content="Скрыть"
-                    Background="{ThemeResource SystemAccentColor}"
-                    Click="Button_Click"/>
-        </VariableSizedWrapGrid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="DarkViolet" Offset="0"/>
+                <GradientStop Color="CadetBlue" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Padding="12 4"
+                Margin="10"
+                CornerRadius="20">
+            <Border.Background>
+                <AcrylicBrush TintColor="Black"
+                              FallbackColor="Transparent"
+                              TintOpacity=".5"/>
+            </Border.Background>
+            <VariableSizedWrapGrid x:Name="DynamicPanel"
+                                   Orientation="Horizontal"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Bottom">
+                <VariableSizedWrapGrid.ChildrenTransitions>
+                    <TransitionCollection>
+                        <PaneThemeTransition/>
+                    </TransitionCollection>
+                </VariableSizedWrapGrid.ChildrenTransitions>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🏁"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="Тренировка"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🖋"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="Райтер"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🗃"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="Пикер"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🎓"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="О нас"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="📃"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="Логи"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🥇"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="Профиль"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+                <Button Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100"
+                        Click="Button_Click">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🕶"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"/>
+                            <TextBlock Text="Скрыть"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                   HorizontalAlignment="Center"/>
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
+            </VariableSizedWrapGrid>
+        </Border>
+
         <Button x:Name="DynamicPanelVisibilityButton"
                 Content="👁"
-                Background="{ThemeResource SystemAccentColor}"
+                FontSize="24"
+                CornerRadius="20 0 0 0"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Visibility="Collapsed"
-                Click="DynamicPanelVisibilityButton_Click"/>
+                Click="DynamicPanelVisibilityButton_Click">
+            <Button.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}" Offset="0"/>
+                    <GradientStop Color="{ThemeResource SystemAccentColorLight1}" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>
