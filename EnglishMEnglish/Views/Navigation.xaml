@@ -16,6 +16,7 @@
                               Offset="1" />
             </LinearGradientBrush>
         </Grid.Background>
+        <Frame x:Name="ContentFrame" />
         <Border HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Padding="12 4"
@@ -35,12 +36,14 @@
                         <PaneThemeTransition />
                     </TransitionCollection>
                 </VariableSizedWrapGrid.ChildrenTransitions>
-                <Button Style="{ThemeResource ButtonRevealStyle}"
+                <Button x:Name="HomeButton"
+                        Style="{ThemeResource ButtonRevealStyle}"
                         Padding="12 4"
                         Background="Transparent"
                         BorderThickness="1"
                         CornerRadius="4"
-                        MinWidth="100">
+                        MinWidth="100"
+                        Click="HomeButton_Click">
                     <Button.Content>
                         <StackPanel>
                             <TextBlock Text="🏁"

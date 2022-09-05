@@ -1,14 +1,73 @@
-﻿<Page
-    x:Class="EnglishMEnglish.Views.Home"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:EnglishMEnglish.Views"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+﻿<Page x:Class="EnglishMEnglish.Views.Home"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:EnglishMEnglish.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+        <GridView>
+            <GridView.Transitions>
+                <TransitionCollection>
+                    <PaneThemeTransition />
+                </TransitionCollection>
+            </GridView.Transitions>
+            <StackPanel Orientation="Horizontal"
+                        Spacing="4">
+                <Button Content="Быстрая"
+                        MinHeight="240"
+                        MinWidth="120"
+                        CornerRadius="20">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="LightCoral"
+                                          Offset="0" />
+                            <GradientStop Color="AntiqueWhite"
+                                          Offset=".25" />
+                            <GradientStop Color="BurlyWood"
+                                          Offset=".75" />
+                            <GradientStop Color="OrangeRed"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Content="Умеренная"
+                        MinHeight="240"
+                        MinWidth="120"
+                        CornerRadius="20">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="Khaki"
+                                          Offset="0" />
+                            <GradientStop Color="BurlyWood"
+                                          Offset=".25" />
+                            <GradientStop Color="NavajoWhite"
+                                          Offset=".75" />
+                            <GradientStop Color="HotPink"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button Content="Увесистая"
+                        MinHeight="240"
+                        MinWidth="120"
+                        CornerRadius="20">
+                    <Button.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="AntiqueWhite"
+                                          Offset="0" />
+                            <GradientStop Color="DarkCyan"
+                                          Offset=".25" />
+                            <GradientStop Color="MistyRose"
+                                          Offset=".75" />
+                            <GradientStop Color="CornflowerBlue"
+                                          Offset="1" />
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
+        </GridView>
     </Grid>
 </Page>

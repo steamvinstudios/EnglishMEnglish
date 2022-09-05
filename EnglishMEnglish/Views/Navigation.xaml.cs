@@ -36,5 +36,8 @@ namespace EnglishMEnglish.Views
             (sender as Button).Visibility = Visibility.Collapsed;
             DynamicPanel.Visibility = Visibility.Visible;
         }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e) =>
+            ContentFrame.Navigate(typeof(Home));
     }
 }
