@@ -165,24 +165,46 @@
                         </StackPanel>
                     </Button.Content>
                 </Button>
+                <Button x:Name="BackButton"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100"
+                        Click="BackButton_Click">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="🔙"
+                                       FontSize="24"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock Text="Назад"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
             </VariableSizedWrapGrid>
         </Border>
 
         <Button x:Name="DynamicPanelVisibilityButton"
+                Style="{ThemeResource ButtonRevealStyle}"
+                BorderThickness="1"
                 Content="👁"
                 FontSize="24"
-                CornerRadius="20 0 0 0"
+                MinWidth="56"
+                MinHeight="56"
+                Margin="8"
+                CornerRadius="45"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
                 Visibility="Collapsed"
                 Click="DynamicPanelVisibilityButton_Click">
             <Button.Background>
-                <LinearGradientBrush>
-                    <GradientStop Color="{ThemeResource SystemAccentColorDark1}"
-                                  Offset="0" />
-                    <GradientStop Color="{ThemeResource SystemAccentColorLight1}"
-                                  Offset="1" />
-                </LinearGradientBrush>
+                <AcrylicBrush TintColor="Black"
+                              FallbackColor="Transparent"
+                              TintOpacity=".5" />
             </Button.Background>
         </Button>
     </Grid>

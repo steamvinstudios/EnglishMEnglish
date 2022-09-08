@@ -7,7 +7,20 @@
       mc:Ignorable="d"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Padding="20">
+        <Grid.Background>
+            <LinearGradientBrush>
+                <LinearGradientBrush.Transform>
+                    <CompositeTransform Rotation="0" />
+                </LinearGradientBrush.Transform>
+                <GradientStop Color="#FFFEFFB6"
+                              Offset="0" />
+                <GradientStop Color="DarkViolet"
+                              Offset=".5" />
+                <GradientStop Color="CadetBlue"
+                              Offset="1" />
+            </LinearGradientBrush>
+        </Grid.Background>
         <GridView>
             <GridView.Transitions>
                 <TransitionCollection>

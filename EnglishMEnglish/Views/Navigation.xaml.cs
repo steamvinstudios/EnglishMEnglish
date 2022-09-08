@@ -39,5 +39,11 @@ namespace EnglishMEnglish.Views
 
         private void HomeButton_Click(object sender, RoutedEventArgs e) =>
             ContentFrame.Navigate(typeof(Home));
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ContentFrame.CanGoBack)
+                ContentFrame.GoBack();
+        }
     }
 }
