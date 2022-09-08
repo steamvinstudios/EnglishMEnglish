@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -22,8 +23,13 @@ namespace EnglishMEnglish.Views
     /// </summary>
     public sealed partial class Navigation : Page
     {
-        public Navigation() =>
+        public ObservableCollection<int> NavigationStackSize { get; set; } =
+            new ObservableCollection<int>();
+        public Navigation()
+        {
             this.InitializeComponent();
+            NavigationStackSize.Add(ContentFrame.BackStack.Count);
+        }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -45,5 +51,8 @@ namespace EnglishMEnglish.Views
             if (ContentFrame.CanGoBack)
                 ContentFrame.GoBack();
         }
+
+        private void ClearNavigationStack_Click(object sender, RoutedEventArgs e) =>
+            ContentFrame.BackStack.Clear();
     }
 }

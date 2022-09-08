@@ -17,6 +17,19 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Frame x:Name="ContentFrame" />
+        <Border HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                CornerRadius="0 0 0 20">
+            <Border.Background>
+                <AcrylicBrush TintColor="Black"
+                              FallbackColor="Transparent"
+                              TintOpacity=".5" />
+            </Border.Background>
+            <TextBlock Text="{x:Bind NavigationStackSize.Count, Mode=OneWay}"
+                       FontSize="32"
+                       Padding="20"
+                       Foreground="White" />
+        </Border>
         <Border HorizontalAlignment="Center"
                 VerticalAlignment="Bottom"
                 Padding="12 4"
@@ -185,6 +198,26 @@
                         </StackPanel>
                     </Button.Content>
                 </Button>
+                <Button x:Name="ClearNavigationStack"
+                        Style="{ThemeResource ButtonRevealStyle}"
+                        Padding="12 4"
+                        Background="Transparent"
+                        BorderThickness="1"
+                        CornerRadius="4"
+                        MinWidth="100"
+                        Click="ClearNavigationStack_Click">
+                    <Button.Content>
+                        <StackPanel>
+                            <TextBlock Text="remove"
+                                       FontSize="24"
+                                       HorizontalAlignment="Center" />
+                            <TextBlock Text="Очистка"
+                                       FontFamily="Bahnschrift"
+                                       Foreground="#FFF"
+                                       HorizontalAlignment="Center" />
+                        </StackPanel>
+                    </Button.Content>
+                </Button>
             </VariableSizedWrapGrid>
         </Border>
 
@@ -207,5 +240,6 @@
                               TintOpacity=".5" />
             </Button.Background>
         </Button>
+
     </Grid>
 </Page>
